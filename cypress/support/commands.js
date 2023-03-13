@@ -24,7 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('addProdutos1', (tamanho, cor, quantidade) => {
+Cypress.Commands.add('addProduto1', (tamanho, cor, quantidade) => {
     cy.get('.search').should('be.visible')
         .type('Abominable Hoodie', { delay: 50 })
     cy.get('.search > .tbay-search-form > .form-ajax-search > .form-group > .input-group > .button-group')
@@ -37,7 +37,7 @@ Cypress.Commands.add('addProdutos1', (tamanho, cor, quantidade) => {
     cy.get('.woocommerce-message').should('contain', '“Abominable Hoodie” foi adicionado no seu carrinho.')
 })
 
-Cypress.Commands.add('addProdutos2', (tamanho, cor, quantidade) => {
+Cypress.Commands.add('addProduto2', (tamanho, cor, quantidade) => {
     cy.get('.search').should('be.visible')
         .type('Stellar Solar Jacket', { delay: 50 })
     cy.get('.search > .tbay-search-form > .form-ajax-search > .form-group > .input-group > .button-group')
@@ -50,7 +50,7 @@ Cypress.Commands.add('addProdutos2', (tamanho, cor, quantidade) => {
     cy.get('.woocommerce-message').should('contain', '“Stellar Solar Jacket” foi adicionado no seu carrinho.')
 })
 
-Cypress.Commands.add('addProdutos3', (tamanho, cor, quantidade) => {
+Cypress.Commands.add('addProduto3', (tamanho, cor, quantidade) => {
     cy.get('.search').should('be.visible')
         .type('Ingrid Running Jacket', { delay: 50 })
     cy.get('.search > .tbay-search-form > .form-ajax-search > .form-group > .input-group > .button-group')
@@ -62,3 +62,4 @@ Cypress.Commands.add('addProdutos3', (tamanho, cor, quantidade) => {
     cy.get('.single_add_to_cart_button').click()
     cy.get('.woocommerce-message').should('contain', '“Ingrid Running Jacket” foi adicionado no seu carrinho.')
 })
+
